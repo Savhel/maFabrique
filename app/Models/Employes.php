@@ -18,8 +18,8 @@ class Employes extends Model
         'nom',
         'prenom',
         'adresse',
-        'photodeprofil',
-        'photodecni',
+        // 'photodeprofil',
+        'cni',
         'telephone',
         'contacturgent',
     ];

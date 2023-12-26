@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('adresse');
             $table->string('password');
             $table->boolean('is_active')->default(0);
-            $table->string('photodeprofil');
+            $table->string('cni')->unique();
             $table->timestamps();
         });
     }

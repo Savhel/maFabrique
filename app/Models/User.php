@@ -23,7 +23,7 @@ class User extends Authenticatable
         'password',
         'telephone',
         'prenom',
-        'photodeprofil',
+        'cni',
         'is_active',
     ];
 

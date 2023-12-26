@@ -26,8 +26,8 @@ class RegisterPage extends Component
     // #[Validate('required|min:3')]
     public $prenom = '';
 
-    #[Validate('image|max:1024')] // 1MB Max
-    public $photodeprofil;
+    #[Validate('required|min:5|unique:users,cni')] // 1MB Max
+    public $cni;
 
     #[Validate('required|min:3|unique:users,telephone')]
     public $telephone = '';
@@ -59,13 +59,13 @@ class RegisterPage extends Component
             'adresse' => ['required', 'string', 'max:255'],
             'telephone' => ['required', 'string', 'lowercase' , 'max:255', 'unique:'.User::class],
             'password' => ['required', 'string' ],
-            'photodeprofil' => ['required', 'image', 'max:1024' ]
+            'cni' => ['required', 'string', 'max:255', 'unique:'.User::class ]
         ]);
-        if($this->photodeprofil){
+        // if($this->photodeprofil){
 
-            $validated['photodeprofil'] = $this->photodeprofil->store('profils','public');
+        //     $validated['photodeprofil'] = $this->photodeprofil->store('profils','public');
 
-        }
+        // }
 
         if ($this->password == $this->password_confirmation){
 

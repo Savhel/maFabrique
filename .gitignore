@@ -1,5 +1,40 @@
-
-/node_modules
+# Fichiers générés par Laravel
 /vendor
+/node_modules
+/public/storage
+/public/hot
+/storage/*.key
+/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+
+# Fichiers générés par l'éditeur de code
+.idea
 /.vscode
-.vercel
+/.phpstorm.meta.php
+/.phpstorm.stubs.php
+
+# Fichiers de configuration spécifiques à l'environnement
+.env
+.env.backup
+.env.*.local
+
+# Fichiers de cache et de logs
+/cache
+/logs
+/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Autres fichiers spécifiques à l'application
+/public/css
+/public/js
+/public/mix-manifest.json
+/public/mix.js
+/public/mix.css
+
+# Fichiers de sauvegarde
+*.swp
+*~
+.DS_Store

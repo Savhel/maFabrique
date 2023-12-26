@@ -19,11 +19,8 @@ class AjoutUtilisateur extends Component
     use WithFileUploads;
     // public EmployesForm $enmploye;
 
-    #[Validate('image|max:1024')] // 1MB Max
-    public $photodeprofil;
-
-    #[Validate('image|max:1024')] // 1MB Max
-    public $photodecni;
+    #[Validate('required|min:5|unique:employes,cni')]
+    public $cni = '';
 
 
     #[Validate('required|min:2')]
@@ -60,13 +57,13 @@ class AjoutUtilisateur extends Component
 
             $validated = $this->validate();
 
-            if($this->photodeprofil and $this->photodecni){
+            // if($this->photodeprofil and $this->photodecni){
 
-                $validated['photodeprofil'] = $this->photodeprofil->store('profils','public');
+            //     $validated['photodeprofil'] = $this->photodeprofil->store('profils','public');
 
-                $validated['photodecni'] = $this->photodecni->store('cni','public');
+            //     $validated['photodecni'] = $this->photodecni->store('cni','public');
 
-            }
+            // }
 
             // dd($validated);
 

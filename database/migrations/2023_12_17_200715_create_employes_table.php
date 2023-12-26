@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('adresse');
-            $table->string('photodeprofil');
-            $table->string('photodecni');
+            // $table->string('photodeprofil');
+            $table->string('cni');
             $table->string('telephone');
             $table->string('contacturgent');
             $table->timestamps();
